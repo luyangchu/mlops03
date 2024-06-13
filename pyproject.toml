@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlops_git03"
+version = "0.0.1"
+description = "This is a part of the MLOPS exercises for Topic 2.3."
+authors = [
+  { name = "Luyang Chu", email = "your@email.com" },
+]
+
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+packages = ["mlops_git03"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = {file = ['requirements_dev.txt']}
+
+[tool.ruff]
+line-length = 120
